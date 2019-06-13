@@ -1,4 +1,5 @@
 import logging
+from typing import Final
 
 from aiogram import Bot, Dispatcher, executor, types
 
@@ -15,7 +16,7 @@ class BotDispatcher:
         logging.basicConfig(level=logging.INFO)
 
         # Initialize bot and dispatcher
-        self._APIToken = api_token
+        self._APIToken: Final[str] = api_token
         self._bot = Bot(token=api_token)
         self._dp = Dispatcher(self._bot)
 

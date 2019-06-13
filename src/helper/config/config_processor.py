@@ -1,6 +1,6 @@
 # coding=utf-8
 import os
-from typing import Optional
+from typing import Optional, Final
 
 import jsonpickle
 
@@ -11,9 +11,9 @@ from src.helper.pattern.singleton import Singleton
 class ConfigProcessor(metaclass=Singleton):
     _config: Config
 
-    __CURRENT_DIR: str = ".\\"
-    __CONFIG_FILE_NAME: str = "config.json"
-    __BOT_SETTING: str = "botSetting"
+    __CURRENT_DIR: Final[str] = ".\\"
+    __CONFIG_FILE_NAME: Final[str] = "config.json"
+    __BOT_SETTING: Final[str] = "botSetting"
 
     def __init__(self):
         self._config = Config()

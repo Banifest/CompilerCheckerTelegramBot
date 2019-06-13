@@ -1,0 +1,6 @@
+---
+applications:
+  - name: banifest_teleg_bot
+    path: .
+    memory: 128M
+    command: python main.py
