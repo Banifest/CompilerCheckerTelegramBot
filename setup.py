@@ -8,5 +8,5 @@ setup(
     license='MIT',
     author='Alexandr Martyniuk',
     author_email='banifest@gmail.com',
-    description='', install_requires=['jsonpickle', 'aiogram']
+    description='', install_requires=['jsonpickle', 'aiogram', 'lxml']
 )

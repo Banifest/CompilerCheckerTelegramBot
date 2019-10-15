@@ -1,6 +1,6 @@
 # coding=utf-8
 import os
-from typing import Optional, Final
+from typing import Optional, Final, final
 
 import jsonpickle
 
@@ -8,6 +8,7 @@ from src.helper.config.config import Config
 from src.helper.pattern.singleton import Singleton
 
 
+@final
 class ConfigProcessor(metaclass=Singleton):
     _config: Config
 

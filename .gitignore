@@ -3,3 +3,10 @@
 venv/
 config.json
 */__pycache__/
+!/config.json
+requirements.txt
+runtime.txt
+src/__init__.py
+src/bot/__pycache__/
+src/helper/config/__pycache__/
+src/helper/pattern/__pycache__/

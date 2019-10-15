@@ -6,6 +6,6 @@ from dataclasses import dataclass
 class Config:
     @dataclass
     class BotSetting:
-        APIToken: str = ""
+        apiToken: str = ""
 
     botSetting: BotSetting = BotSetting()
