@@ -29,8 +29,7 @@ class ConfigProcessor(metaclass=Singleton):
         return self._config
 
     def parse_config(self, file_path: Optional[str] = None):
-        local_file_path: str = "{0}{1}".format(file_path or self.__CURRENT_DIR, self.__CONFIG_FILE_NAME)
-        if os.path.exists(local_file_path):
+        if os.path.exists(local_file_path := "{0}{1}".format(file_path or self.__CURRENT_DIR, self.__CONFIG_FILE_NAME)):
             config_file = open(local_file_path)
             parsed_config = jsonpickle.decode(config_file.read())
             self._config.botSetting = Config.BotSetting(**parsed_config[ConfigProcessor.__BOT_SETTING])

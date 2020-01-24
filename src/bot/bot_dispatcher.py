@@ -20,9 +20,9 @@ class BotDispatcher:
         self._dp = Dispatcher(self._bot)
 
         # Temp solution for testing telegram bot
-        @self._dp.message_handler(regexp='^zamazan4ik$')
+        @self._dp.message_handler(regexp='^$')
         async def zamazan(message: types.Message):
-            await self._bot.send_message(message.chat.id, "щенок".format(message.text))
+            await self._bot.send_message(message.chat.id, "test".format(message.text))
 
         @self._dp.message_handler()
         async def echo(message: types.Message):
